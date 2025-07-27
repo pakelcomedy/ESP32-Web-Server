@@ -1,0 +1,18 @@
+[package]
+name = "esp32-web-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# ESP-IDF bindings
+esp-idf-sys = { version = "0.50", features = ["binstart"] }
+esp-idf-hal = "0.39"
+esp-idf-svc = { version = "0.50", features = ["http-server", "wifi"] }
+
+# Common
+anyhow = "1.0"
+log = "0.4"
+embedded-svc = "0.19"
+
+[profile.release]
+opt-level = "s"
