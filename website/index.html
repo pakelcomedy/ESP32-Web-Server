@@ -2,13 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ESP32 Web Server</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 Web Server Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <h1>ESP32 Web Server</h1>
-  <p>Current uptime: <span id="uptime">--</span> seconds</p>
-  <button id="btn">Get Time</button>
-  <script src="script.js"></script>
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="logo">ESP32 Server</a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#status">Status</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Welcome to the ESP32 Web Server</h1>
+      <p>Your IoT monitoring and control at your fingertips. Access real-time data, system logs, and configuration.</p>
+      <a href="#features" class="btn-primary">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h3>Real-Time Monitoring</h3>
+          <p>Visualize sensor data in real-time with auto-refresh.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Remote Control</h3>
+          <p>Toggle GPIO pins, LEDs, and actuators from anywhere.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Wi-Fi Connectivity</h3>
+          <p>Secure connection via WPA2; supports static and DHCP.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Customizable UI</h3>
+          <p>Modify HTML/CSS/JS to fit your project’s needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- System Status Section -->
+  <section id="status" class="status">
+    <div class="container">
+      <h2>Current System Status</h2>
+      <div class="status-cards">
+        <div class="card">
+          <h4>Uptime</h4>
+          <p id="uptime-value">--</p>
+        </div>
+        <div class="card">
+          <h4>CPU Load</h4>
+          <p id="cpu-load">--%</p>
+        </div>
+        <div class="card">
+          <h4>Memory Usage</h4>
+          <p id="memory-usage">--%</p>
+        </div>
+        <div class="card">
+          <h4>IP Address</h4>
+          <p id="ip-address">--</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About This Project</h2>
+      <p>This web interface is hosted directly by an ESP32 microcontroller running a Rust-based HTTP server. Leverage modern web technologies to monitor and control your embedded devices without external dependencies.</p>
+      <ul>
+        <li>No external server needed</li>
+        <li>Ultra-low power consumption</li>
+        <li>Secure over HTTPS (future support)</li>
+        <li>Easy to extend and customize</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 ESP32 Web Server. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Documentation</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
